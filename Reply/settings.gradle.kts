@@ -17,6 +17,7 @@ val snapshotVersion : String? = System.getenv("COMPOSE_SNAPSHOT_ID")
 
 pluginManagement {
     repositories {
+        maven{ url = uri("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")}
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -29,6 +30,7 @@ dependencyResolutionManagement {
             println("https://androidx.dev/snapshots/builds/$it/artifacts/repository/") 
             maven { url = uri("https://androidx.dev/snapshots/builds/$it/artifacts/repository/") }
         }
+        maven{ url = uri("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")}
 
         google()
         mavenCentral()
